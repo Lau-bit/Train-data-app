@@ -20,6 +20,6 @@ Self-evaluation:
 <li>However, there's no custom search string
     </ul>
 
-The application works as intended with no noticeable errors, and could really be used for travel if needed.
+All of the written requirements are met. The application works as intended with no noticeable errors, and could really be used for travel if needed.
     
 I would give this project 25/30 points.
