@@ -28,7 +28,7 @@ var stations = {//List for referencing train station abbreviations
 
 var lineP = ["PSL", "ILA", "HPL", "POH", "KAN", "MLO", "MYR", "LOH", "MRL", "VKS", "VEH", "KTÖ", "AVP"]; //station shortcodes for train line p
 
-var lineI = ["KÄP", "OLK", "PMK", "ML", "TNA", "PLA", "TKL", "HKH", "LNÄ"];//station shortcodes for train line i
+var lineI = ["KÄP", "OLK", "PMK", "ML", "TNA", "PLA", "TKL", "HKH", "LNÄ"]; //station shortcodes for train line i
 
 var stationsZ; //Variable for finding the abbreviation - station name pair
 
@@ -128,6 +128,9 @@ function getTrainData() { //The main function for the app's functionality: the f
                 trainResult.innerHTML += "<tr><td> " + output[h].commuterLine + "</td><td>" +//display the data in a table: the for loop iterates each item in the list according to list length and add the filtered data in the table
                     hours + ":" + minutes + "</td><td>" + stationZ + "</td></tr>";
             }
+        }
+        xhr.onerror = function(error){//If Digitraffic doesn't respond, an error message will show up
+            trainTable.innerHTML=("Something went wrong. Please try again. The service may be unavailable.");
         }
     }
     xhr.open("GET", "https://rata.digitraffic.fi/api/v1//live-trains/station/" + selectorValue + "?departing_trains=100&include_nonstopping=false&train_categories=Commuter", true);//details for the "GET" request and the url for requesting data in asynchronous mode to get data from Digitraffic
