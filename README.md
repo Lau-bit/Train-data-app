@@ -18,6 +18,7 @@ Self-evaluation:
 <li>The page is made easy to use and well readable while not looking too plain
 <li>All of the HSL area stations are available for finding data
 <li>However, there's no custom search string
+    </ul>
 
 The application works as intended with no noticeable errors, and could really be used for travel if needed.
     
