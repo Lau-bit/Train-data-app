@@ -8,11 +8,11 @@ The application is for getting train data from Digitraffic and displaying it in 
 Self-evaluation:
 
 <ul><li>The project is published on Github and deployed to Netlify.</li>
-Everything is commented in the code
-External libraries are not used
-CSS is used to style the page, and it's responsive to screen size
-No hard coded onclick -listeners.
-Project is done individually
+<li>Everything is commented in the code
+<li>External libraries are not used
+<li>CSS is used to style the page, and it's responsive to screen size
+<li>No hard coded onclick -listeners.
+<li>Project is done individually
 </ul>
 The User can select a trainstation and get current timetable info regarding that station
 The page is made easy to use and well readable while not looking too plain
