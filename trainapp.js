@@ -26,9 +26,9 @@ var stations = {//List for referencing train station abbreviations
     "HPL": "Huopalahti", "ILA": "Ilmala", "TPE": "Tampere"
 };
 
-var lineP = ["PSL", "ILA", "HPL", "POH", "KAN", "MLO", "MYR", "LOH", "MRL", "VKS", "VEH", "KTÖ", "AVP"];
+var lineP = ["PSL", "ILA", "HPL", "POH", "KAN", "MLO", "MYR", "LOH", "MRL", "VKS", "VEH", "KTÖ", "AVP"]; //station shortcodes for train line p
 
-var lineI = ["KÄP", "OLK", "PMK", "ML", "TNA", "PLA", "TKL", "HKH", "LNÄ"];
+var lineI = ["KÄP", "OLK", "PMK", "ML", "TNA", "PLA", "TKL", "HKH", "LNÄ"];//station shortcodes for train line i
 
 var stationsZ; //Variable for finding the abbreviation - station name pair
 
