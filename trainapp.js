@@ -16,15 +16,19 @@ var stations = {//List for referencing train station abbreviations
     "JRS": "Jorvas", "TOL": "Tolsa", "KKN": "Kirkkonummi", "KE": "Kerava", "LH": "Lahti",
     "KV": "Kouvola", "RI": "Riihimäki", "HL": "Hämeenlinna", "STI": "Siuntio",
     "KÄP": "Käpylä", "OLK": "Oulunkylä", "PMK": "Pukinmäki", "ML": "Malmi", "TNA": "Tapanila",
-    "PLA": "Puistola", "TIK": "Tikkurila", "HKH": "Hiekkaharju", "KVY": "Koivukylä", "RKL": "Rekola",
-    "KRS": "Korso", "SAV": "Savio", "KEV": "Kerava", "AIN": "Ainola", "JVP": "Järvenpää",
-    "SAU": "Saunakallio", "JK": "Jokela", "HY": "Hyvinkää", "RII": "Riihimäki", "KÄP": "Käpylä",
+    "PLA": "Puistola", "HKH": "Hiekkaharju", "KVY": "Koivukylä", "RKL": "Rekola",
+    "KRS": "Korso", "SAV": "Savio", "KE": "Kerava", "AIN": "Ainola", "JP": "Järvenpää",
+    "SAU": "Saunakallio", "JK": "Jokela", "HY": "Hyvinkää", "KÄP": "Käpylä",
     "OLK": "Oulunkylä", "PMK": "Pukinmäki", "ML": "Malmi", "TNA": "Tapanila", "PLA": "Puistola",
-    "TIK": "Tikkurila", "HKH": "Hiekkaharju", "LNÄ": "Leinelä", "LEN": "Helsinki Airport", "AVP": "Aviapolis",
+    "TKL": "Tikkurila", "LNÄ": "Leinelä", "LEN": "Helsinki Airport", "AVP": "Aviapolis",
     "KTÖ": "Kivistö", "VEH": "Vehkala", "VKS": "Vantaankoski", "MRL": "Martinlaakso", "LOH": "Louhela",
     "MYR": "Myyrmäki", "MLO": "Malminkartano", "KAN": "Kannelmäki", "POH": "Pohjois-Haaga",
-    "HPL": "Huopalahti", "ILA": "Ilmala"
+    "HPL": "Huopalahti", "ILA": "Ilmala", "TPE": "Tampere"
 };
+
+var lineP = ["PSL", "ILA", "HPL", "POH", "KAN", "MLO", "MYR", "LOH", "MRL", "VKS", "VEH", "KTÖ", "AVP"];
+
+var lineI = ["KÄP", "OLK", "PMK", "ML", "TNA", "PLA", "TKL", "HKH", "LNÄ"];
 
 var stationsZ; //Variable for finding the abbreviation - station name pair
 
@@ -93,7 +97,10 @@ function getTrainData() { //The main function for the app's functionality: the f
                         if (tmp.Time < str) { //if the train has already departed according to schedule, remove it from the data
                             break;
                         }
-                        if (tmp.shortCode == selectorValue) { //If the train is departing from HKI and the destination is HKI according to Digitraffic data, then the real destination is the airport train station
+                        if (tmp.shortCode == selectorValue || lineP.includes(selectorValue) && response[i].commuterLineID == "P") { //If the train is departing from HKI and the destination is HKI according to Digitraffic data, then the real destination is the airport train station
+                            tmp.shortCode = "Airport";//The or statement is for making the line p train destination to read as airport if you're in the stations before it
+                        }
+                        else if (lineI.includes(selectorValue) && response[i].commuterLineID == "I") {//same as above but for line i trains
                             tmp.shortCode = "Airport";
                         }
                         output.push(tmp);//add the temporary data to data for outputting it later
