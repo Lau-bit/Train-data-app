@@ -17,6 +17,8 @@ Self-evaluation:
 >User can select a trainstation and get current timetable info regarding that station
 >The page is made easy to use and well readable while not looking too plain
 >All of the HSL area stations are available for finding data
-<No custom search string
+>However, there's no custom search string
+
+The application really works and could really be used for travel if needed.
     
 I would give this project 25/30 points.
