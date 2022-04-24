@@ -14,10 +14,10 @@ Self-evaluation:
 <li>No hard coded onclick -listeners.
 <li>Project is done individually
 </ul>
-The User can select a trainstation and get current timetable info regarding that station
-The page is made easy to use and well readable while not looking too plain
-All of the HSL area stations are available for finding data
-However, there's no custom search string
+<ul><li>The User can select a trainstation and get current timetable info regarding that station
+<li>The page is made easy to use and well readable while not looking too plain
+<li>All of the HSL area stations are available for finding data
+<li>However, there's no custom search string
 
 The application works as intended with no noticeable errors, and could really be used for travel if needed.
     
