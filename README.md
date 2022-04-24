@@ -19,6 +19,6 @@ Self-evaluation:
 >All of the HSL area stations are available for finding data
 >However, there's no custom search string
 
-The application really works and could really be used for travel if needed.
+The application works as intended with no noticeable errors, and could really be used for travel if needed.
     
 I would give this project 25/30 points.
