@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Train station app</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <script src="trainapp.js" defer></script>
+
+</head>
+
+<body>
+  <header>
+    <img src="IMG/train.png"></img>
+    <h1>Train data app</h1>
+  </header>
+
+  <div class="container">
+    <p>This app is for displaying commuter train timetables for stations
+      in the HSL area.
+      Select a station from the dropdown menu, click get train data, and see scheduled train departure times.
+    </p>
+    <div class="box">
+      <div class="box-row">
+        <div class="box-cell box1">
+
+          <select id="stationSelect">
+            <optgroup label="Helsinki-Kirkkonummi">
+              <option value="HKI">Helsinki</option>
+              <option value="PSL">Pasila</option>
+              <option value="ILA">Ilmala</option>
+              <option value="HPL">Huopalahti</option>
+              <option value="VMO">Valimo</option>
+              <option value="PJM">Pitäjänmäki</option>
+              <option value="MÄK">Mäkkylä</option>
+              <option value="LPV">Leppävaara</option>
+              <option value="KIL">Kilo</option>
+              <option value="KEA">Kera</option>
+              <option value="KNI">Kauniainen</option>
+              <option value="KVH">Koivuhovi</option>
+              <option value="TRL">Tuomarila</option>
+              <option value="EPO">Espoo</option>
+              <option value="KLH">Kauklahti</option>
+              <option value="MAS">Masala</option>
+              <option value="JRS">Jorvas</option>
+              <option value="TOL">Tolsa</option>
+              <option value="KKN">Kirkkonummi</option>
+            </optgroup>
+            <optgroup label="Helsinki-Riihimäki">
+              <option value="HKI">Helsinki</option>
+              <option value="PSL">Pasila</option>
+              <option value="KÄP">Käpylä</option>
+              <option value="OLK">Oulunkylä</option>
+              <option value="PMK">Pukinmäki</option>
+              <option value="ML">Malmi</option>
+              <option value="TNA">Tapanila</option>
+              <option value="PLA">Puistola</option>
+              <option value="TIK">Tikkurila</option>
+              <option value="HKH">Hiekkaharju</option>
+              <option value="KVY">Koivukylä</option>
+              <option value="RKL">Rekola</option>
+              <option value="KRS">Korso</option>
+              <option value="SAV">Savio</option>
+              <option value="KEV">Kerava</option>
+              <option value="AIN">Ainola</option>
+              <option value="JVP">Järvenpää</option>
+              <option value="SAU">Saunakallio</option>
+              <option value="JK">Jokela</option>
+              <option value="HY">Hyvinkää</option>
+              <option value="RII">Riihimäki</option>
+            </optgroup>
+            <optgroup label="Kehärata">
+              <option value="HKI">Helsinki</option>
+              <option value="PSL">Pasila</option>
+              <option value="KÄP">Käpylä</option>
+              <option value="OLK">Oulunkylä</option>
+              <option value="PMK">Pukinmäki</option>
+              <option value="ML">Malmi</option>
+              <option value="TNA">Tapanila</option>
+              <option value="PLA">Puistola</option>
+              <option value="TIK">Tikkurila</option>
+              <option value="HKH">Hiekkaharju</option>
+              <option value="LNÄ">Leinelä</option>
+              <option value="LEN">Helsinki Airport</option>
+              <option value="AVP">Aviapolis</option>
+              <option value="KTÖ">Kivistö</option>
+              <option value="VEH">Vehkala</option>
+              <option value="VKS">Vantaankoski</option>
+              <option value="MRL">Martinlaakso</option>
+              <option value="LOH">Louhela</option>
+              <option value="MYR">Myyrmäki</option>
+              <option value="MLO">Malminkartano</option>
+              <option value="KAN">Kannelmäki</option>
+              <option value="POH">Pohjois-Haaga</option>
+              <option value="HPL">Huopalahti</option>
+              <option value="ILA">Ilmala</option>
+
+
+            </optgroup>
+          </select>
+        </div>
+
+        <div class="box-cell box2">
+          <button id="returnTrains">Get train data</button>
+        </div>
+
+        <div class="box-cell box3">
+          <p id="timer"></p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div id="trainTableArea">
+    <h2>Train departure times for the selected station</h2>
+    <table id="trainTable">
+      <th>Line ID</th>
+      <th>Time of departure</th>
+      <th>Destination</th>
+    </table>
+  </div>
+</body>
+
+</html>
